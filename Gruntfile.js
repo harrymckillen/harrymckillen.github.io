@@ -4,13 +4,12 @@ module.exports = function (grunt) {
     copy: {
       irelandfont: {
         files: [
-          {expand: true, cwd: '../ireland-font/build/', src: ['**'], dest: 'ireland-font/'},
+          {expand: true, cwd: '../ireland-font/build/', src: ['**'], dest: 'ireland-font/'}
         ]
       },
       dosui: {
         files: [
-          {expand: true, cwd: '../dos-ui/build/', src: ['**'], dest: 'dos-ui/'},
-        ]
+          {expand: true, cwd: '../dos-ui/build/', src: ['**'], dest: 'dos-ui/'}        ]
       }
     },
     connect: {
