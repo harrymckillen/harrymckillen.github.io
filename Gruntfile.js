@@ -7,6 +7,11 @@ module.exports = function (grunt) {
           {expand: true, cwd: '../ireland-font/build/', src: ['**'], dest: 'ireland-font/'},
         ]
       },
+      dosui: {
+        files: [
+          {expand: true, cwd: '../dos-ui/build/', src: ['**'], dest: 'dos-ui/'},
+        ]
+      }
     },
     connect: {
       server: {
@@ -22,6 +27,9 @@ module.exports = function (grunt) {
     clean: {
       irelandfont: {
         src: ['ireland-font/']
+      },
+      dosui: {
+        src: ['dos-ui/']
       }
     }
   });
@@ -30,8 +38,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.registerTask('update',
     [
-      'clean:irelandfont',
-      'copy:irelandfont'
+      'clean',
+      'copy', 
     ]);
   grunt.registerTask('default',
     [
