@@ -3,7 +3,7 @@
 /* Directives */
 
 angular.module('dos-ui.directives', [])
-  .directive('spinner', function ($timeout) {
+  .directive('dosSpinner', function ($timeout) {
     return {
       restrict: 'A',
       scope: true,
@@ -23,7 +23,7 @@ angular.module('dos-ui.directives', [])
       }
     };
   })
-  .directive('dialog', function () {
+  .directive('dosDialog', function () {
     return {
       restrict: 'A',
       replace: true,
@@ -39,5 +39,23 @@ angular.module('dos-ui.directives', [])
               <div ng-transclude></div>\
             </div>\
         </div>'
+    };
+  })
+  .directive('dosMenu', function () {
+    return {
+      restrict: 'A',
+      scope: {
+        bordercolour: '@'
+      },
+      /*template:
+        '<div class="dialog padding-3px centered drop-shadow-16px margin-bottom-large {{backgroundcolour}}-background {{fontcolour}}-text">\
+            <div class="content {{bordercolour}}-border-2px padding-med">\
+              <div ng-transclude></div>\
+            </div>\
+        </div>',*/
+      link: function (scope) {
+        console.log('dos-menu:');
+        // console.log(scope);
+      }
     };
   });
